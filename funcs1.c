@@ -95,25 +95,28 @@ int print_string(char *s)
  * Fix up!
  */
 
-int print_bin(int b)
-{
-	int position = 0, count = 0;
-	char *bin;
-	while (b > 0)
-	{
-		bin[position] = (b % 2);
-		b = b / 2;
-		position++; count++;
-	}
-	position++; count++;
-	bin[position] = '\0';
-	position--;
+/**
+*int print_bin(int b)
+*{
+*	int position = 0, count = 0;
+*	char *bin;
+*	while (b > 0)
+*	{
+*		bin[position] = (b % 2);
+*		b = b / 2;
+*		position++; count++;
+*	}
+*	position++; count++;
+*	bin[position] = '\0';
+*	position--;
+*
+*	while (position >= 0)
+*	{
+*		_putchar(bin[position]);
+*		position--;
+*	}
+*
+*	return (count);
+*}
+*/
 
-	while (position >= 0)
-	{
-		_putchar(bin[position]);
-		position--;
-	}
-
-	return (count);
-}
